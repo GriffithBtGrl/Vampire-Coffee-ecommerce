@@ -1,0 +1,79 @@
+:root {
+  --color-bg: #1a0f0a;
+  --color-bg-secondary: #2b1b16;
+  --color-primary: #5c1a2d;
+  --color-accent: #a3472a;
+  --color-text: #f5e6d3;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Cinzel", serif;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  background-color: var(--color-bg-secondary);
+}
+
+.hero {
+  padding: 80px 20px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent);
+}
+
+/* .btn-vampire {
+  padding-left: 12px;
+  padding-right: 12px;
+} */
+
+.card {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid #3b241e;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/* Cart */
+.list-group-item {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid #3b241e;
+}
