@@ -7,14 +7,14 @@ function ProductCard({ product }) {
   return (
     <div className="card m-3" style={{ width: "18rem" }}>
       <img
-        src={product.image}
+        src={product.imagen}
         className="card-img-top"
-        alt={product.name}
+        alt={product.nombre}
       />
 
       <div className="card-body">
-        <h5 className="card-title">{product.name}</h5>
-        <p className="card-text">${product.price}</p>
+        <h5 className="card-title">{product.nombre}</h5>
+        <p className="card-text">${Number(product.precio).toLocaleString("es-CL")}</p>
 
         <button
           className="btn btn-primary"
