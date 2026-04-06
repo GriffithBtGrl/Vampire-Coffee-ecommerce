@@ -7,14 +7,14 @@ function Shop() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/productos`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`
-      }
-    })
+    fetch(`${import.meta.env.VITE_API_URL}/productos`)
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
+        if (Array.isArray(data)) {
+          setProducts(data);
+        } else {
+          setError("Error al cargar productos");
+        }
         setLoading(false);
       })
       .catch((err) => {
