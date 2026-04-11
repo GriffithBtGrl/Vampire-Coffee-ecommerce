@@ -5,6 +5,7 @@ const cors = require("cors");
 const productosRoutes = require("./routes/productos.routes");
 const usuariosRoutes = require("./routes/usuarios.routes");
 const authRoutes = require("./routes/auth.routes");
+const favoritosRoutes = require("./routes/favoritos.routes");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/productos", productosRoutes);
 app.use("/usuarios", usuariosRoutes);
 app.use("/", authRoutes);
+app.use("/favoritos", favoritosRoutes);
 
 app.get("/", (req, res) => {
   res.send("API funcionando");

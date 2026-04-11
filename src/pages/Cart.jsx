@@ -5,7 +5,7 @@ function Cart() {
   const { cart, removeFromCart } = useContext(CartContext);
   const [ordered, setOrdered] = useState(false);
 
-  const total = cart.reduce((sum, product) => sum + Number(product.price), 0);
+  const total = cart.reduce((sum, product) => sum + Number(product.precio), 0);
 
   const handleCheckout = () => {
     setOrdered(true);
@@ -34,7 +34,7 @@ function Cart() {
                 key={index}
                 className="list-group-item d-flex justify-content-between align-items-center"
               >
-                <span>{product.nombre || product.name} — ${Number(product.price).toLocaleString("es-CL")}</span>
+                <span>{product.nombre} — ${Number(product.precio).toLocaleString("es-CL")}</span>
                 <button
                   className="btn btn-sm btn-danger"
                   onClick={() => removeFromCart(index)}

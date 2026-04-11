@@ -4,6 +4,7 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Favoritos from "./pages/Favoritos";
 import Navbar from "./components/Navbar";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/favoritos" element={<Favoritos />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

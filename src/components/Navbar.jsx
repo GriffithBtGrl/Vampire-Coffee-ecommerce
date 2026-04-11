@@ -13,6 +13,15 @@ function Navbar() {
     navigate("/");
   };
 
+  const handleFavoritos = () => {
+    if (token) {
+      navigate("/favoritos");
+    } else {
+      alert("Debes iniciar sesión o registrarte para ver tus favoritos 🧛‍♀️");
+      navigate("/login");
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg px-4">
       <div className="container-fluid">
@@ -30,6 +39,12 @@ function Navbar() {
           <Link className="nav-link text-light" to="/cart">
             Cart ({cart.length})
           </Link>
+          <button
+            className="btn btn-link nav-link text-light"
+            onClick={handleFavoritos}
+          >
+            ⭐ Favoritos
+          </button>
         </div>
 
         <div className="d-flex gap-2">
